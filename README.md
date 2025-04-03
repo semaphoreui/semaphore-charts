@@ -1,4 +1,4 @@
-# Cloudhippie: Charts
+# Semaphore UI Charts
 
 [![Release Build](https://github.com/cloudhippie/charts/actions/workflows/release.yml/badge.svg)](https://github.com/cloudhippie/charts/actions/workflows/release.yml) [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/cloudhippie)](https://artifacthub.io/packages/search?repo=cloudhippie)
 
@@ -18,7 +18,7 @@ helm search repo cloudhippie
 ## Security
 
 If you find a security issue please contact
-[security@cloudhippie.de](mailto:security@cloudhippie.de) first.
+[security@semaphoreui.com](mailto:security@semaphoreui.com) first.
 
 ## Contributing
 

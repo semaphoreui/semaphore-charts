@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $serviceName := print (include "ansible-semaphore.fullname" .) }}
+{{- $serviceName := print (include "semaphoreui.fullname" .) }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: {{ include "ansible-semaphore.fullname" . }}
+  name: {{ include "semaphoreui.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "ansible-semaphore.labels" . | nindent 4 }}
+    {{- include "semaphoreui.labels" . | nindent 4 }}
 {{- if .Values.ingress.labels }}
     {{- toYaml .Values.ingress.labels | nindent 4 }}
 {{- end }}

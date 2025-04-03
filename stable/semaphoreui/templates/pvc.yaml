@@ -4,10 +4,10 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 
 metadata:
-  name: {{ include "ansible-semaphore.fullname" . }}-boltdb
+  name: {{ include "semaphoreui.fullname" . }}-boltdb
   namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "ansible-semaphore.labels" . | nindent 4 }}
+    {{- include "semaphoreui.labels" . | nindent 4 }}
 {{- if .Values.labels }}
     {{- toYaml .Values.labels | nindent 4 }}
 {{- end }}
@@ -36,10 +36,10 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 
 metadata:
-  name: {{ include "ansible-semaphore.fullname" . }}-workdir
+  name: {{ include "semaphoreui.fullname" . }}-workdir
   namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "ansible-semaphore.labels" . | nindent 4 }}
+    {{- include "semaphoreui.labels" . | nindent 4 }}
 {{- if .Values.labels }}
     {{- toYaml .Values.labels | nindent 4 }}
 {{- end }}

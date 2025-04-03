@@ -1,4 +1,4 @@
-# ansible-semaphore
+# semaphoreui
 
 ![Version: 12.12.2](https://img.shields.io/badge/Version-12.12.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.13.7](https://img.shields.io/badge/AppVersion-2.13.7-informational?style=flat-square)
 
@@ -14,7 +14,7 @@ chart should be raised [here](https://github.com/cloudhippie/charts/issues/new)*
 ### OCI (Recommended)
 
 ```console
-helm install ansible-semaphore oci://ghcr.io/cloudhippie/charts/ansible-semaphore
+helm install semaphoreui oci://ghcr.io/cloudhippie/charts/semaphoreui
 ```
 
 ### Traditional
@@ -22,7 +22,7 @@ helm install ansible-semaphore oci://ghcr.io/cloudhippie/charts/ansible-semaphor
 ```console
 helm repo add cloudhippie https://cloudhippie.github.io/charts
 helm repo update
-helm install ansible-semaphore cloudhippie/ansible-semaphore
+helm install semaphoreui cloudhippie/semaphoreui
 ```
 
 ## Example for Values
@@ -34,7 +34,7 @@ ingress:
   enabled: false
 
   hosts:
-    - host: ansible-semaphore.example.com
+    - host: semaphoreui.example.com
       paths:
         - path: /
           pathType: Prefix
@@ -106,7 +106,7 @@ oidc:
 
 ## Source Code
 
-* <https://github.com/ansible-semaphore/semaphore>
+* <https://github.com/semaphoreui/semaphore>
 
 ## Requirements
 

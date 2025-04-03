@@ -2,9 +2,9 @@ annotations:
   artifacthub.io/license: Apache-2.0
   artifacthub.io/links: |-
     - name: Source
-      url: https://github.com/ansible-semaphore/semaphore
+      url: https://github.com/semaphoreui/semaphore
     - name: Chart
-      url: https://github.com/cloudhippie/charts/tree/master/stable/ansible-semaphore
+      url: https://github.com/cloudhippie/charts/tree/master/stable/semaphoreui
   artifacthub.io/signKey: |
     fingerprint: 2B62F542C0C5614F8B4625AE0DDA0DEB51EF789C
     url: https://raw.githubusercontent.com/cloudhippie/charts/master/cloudhippie.key
@@ -21,7 +21,7 @@ dependencies:
   version: 16.6.0
 description: Modern and open-source alternative to AWX/Tower
 home: https://semaphoreui.com/
-icon: https://raw.githubusercontent.com/ansible-semaphore/semaphore/develop/web/public/favicon.svg
+icon: https://raw.githubusercontent.com/semaphoreui/semaphore/develop/web/public/favicon.svg
 keywords:
 - ansible
 - awx
@@ -30,8 +30,8 @@ maintainers:
 - email: thomas@webhippie.de
   name: tboerger
   url: https://github.com/tboerger
-name: ansible-semaphore
+name: semaphoreui
 sources:
-- https://github.com/ansible-semaphore/semaphore
+- https://github.com/semaphoreui/semaphore
 type: application
 version: 12.12.2
