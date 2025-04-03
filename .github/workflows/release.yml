@@ -49,10 +49,10 @@ jobs:
         uses: helm/chart-releaser-action@v1.7.0
         env:
           CR_TOKEN: ${{ secrets.GH_TOKEN }}
-          # CR_KEYRING: /tmp/secring.gpg
-          # CR_PASSPHRASE_FILE: passphrase
+          CR_KEYRING: /tmp/secring.gpg
+          CR_PASSPHRASE_FILE: passphrase
         with:
-          # config: cr.yaml
+          config: cr.yaml
           charts_dir: stable
 
       - name: Push charts
