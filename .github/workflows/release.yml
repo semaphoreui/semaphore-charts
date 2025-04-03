@@ -39,19 +39,19 @@ jobs:
         run: |
           echo -n "${{ secrets.GPG_KEY }}" \
             | base64 --decode \
-            > secring.gpg
+            > /tmp/secring.gpg
 
-      - name: Write passphrase
-        run: |
-          echo -n "${{ secrets.GPG_PASS }}" \
-            > passphrase
+      # - name: Write passphrase
+      #   run: |
+      #     echo -n "${{ secrets.GPG_PASS }}" \
+      #       > passphrase
 
       - name: Run releaser
         uses: helm/chart-releaser-action@v1.7.0
         env:
           CR_TOKEN: ${{ secrets.GH_TOKEN }}
-          CR_KEYRING: secring.gpg
-          CR_PASSPHRASE_FILE: passphrase
+          CR_KEYRING: /tmp/secring.gpg
+          # CR_PASSPHRASE_FILE: passphrase
         with:
           config: cr.yaml
           charts_dir: stable
@@ -72,6 +72,6 @@ jobs:
       - name: Remove secrets
         if: always()
         run: |
-          rm -f secring.gpg passphrase
+          rm -f /tmp/secring.gpg passphrase
 
 ...
