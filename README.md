@@ -11,8 +11,8 @@ Make sure you have installed [Helm][helm], after that you can install the charts
 repository and search for available charts:
 
 ```console
-helm repo add cloudhippie https://cloudhippie.github.io/charts
-helm search repo cloudhippie
+helm repo add semaphoreui https://semaphoreui.github.io/semaphore-charts
+helm search repo semaphoreui
 ```
 
 ## Security
