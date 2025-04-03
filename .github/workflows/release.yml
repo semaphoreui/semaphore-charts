@@ -68,9 +68,9 @@ jobs:
             helm push "$pkg" "oci://ghcr.io/$GITHUB_REPOSITORY_OWNER/charts"
           done
 
-      # - name: Remove secrets
-      #   if: always()
-      #   run: |
-      #     rm -f /tmp/secring.gpg passphrase
+      - name: Remove secrets
+        if: always()
+        run: |
+          rm -f /tmp/secring.gpg passphrase
 
 ...
