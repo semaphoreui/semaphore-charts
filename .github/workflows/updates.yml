@@ -13,7 +13,7 @@ permissions:
 jobs:
   updates:
     runs-on: ubuntu-latest
-    if: github.repository == 'cloudhippie/charts'
+    if: github.repository == 'semaphoreui/semaphore-charts'
 
     steps:
       - name: Generate token

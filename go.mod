@@ -1,4 +1,4 @@
-module github.com/cloudhippie/charts
+module github.com/semaphoreui/semaphore-charts
 
 go 1.24.1
 

@@ -7,10 +7,10 @@ import (
 	"path"
 	"strings"
 
-	"github.com/cloudhippie/charts/internal/chart"
-	"github.com/cloudhippie/charts/internal/chart/oci"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
+	"github.com/semaphoreui/semaphore-charts/internal/chart"
+	"github.com/semaphoreui/semaphore-charts/internal/chart/oci"
 )
 
 func main() {
