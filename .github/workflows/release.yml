@@ -27,8 +27,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "github@cloudhippie.de"
+          git config user.name "Denis Gukov"
+          git config user.email "denguk@gmail.com"
 
       - name: Update readme
         uses: docker://jnorwood/helm-docs:v1.14.2
@@ -37,19 +37,19 @@ jobs:
 
       - name: Write secring
         run: |
-          echo -n "${{ secrets.GNUPG_SECRING }}" \
+          echo -n "${{ secrets.GPG_KEY }}" \
             | base64 --decode \
             > secring.gpg
 
       - name: Write passphrase
         run: |
-          echo -n "${{ secrets.GNUPG_PASSWORD }}" \
+          echo -n "${{ secrets.GPG_PASS }}" \
             > passphrase
 
       - name: Run releaser
         uses: helm/chart-releaser-action@v1.7.0
         env:
-          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CR_TOKEN: ${{ secrets.GH_TOKEN }}
           CR_KEYRING: secring.gpg
           CR_PASSPHRASE_FILE: passphrase
         with:
@@ -58,7 +58,7 @@ jobs:
 
       - name: Push charts
         run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login --username fiftin --password-stdin ghcr.io
+          echo "${{ secrets.GH_TOKEN }}" | helm registry login --username fiftin --password-stdin ghcr.io
 
           for pkg in .cr-release-packages/*.tgz; do
             if [ -z "${pkg:-}" ]; then
