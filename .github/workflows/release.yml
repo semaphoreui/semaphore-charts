@@ -38,6 +38,7 @@ jobs:
       - name: Write secring
         run: |
           echo -n "${{ secrets.GPG_KEY }}" \
+            | base64 --decode \
             > /tmp/secring.gpg
 
       - name: Write passphrase
